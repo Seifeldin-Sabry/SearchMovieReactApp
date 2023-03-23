@@ -1,14 +1,16 @@
 import React from "react";
+import "./MovieSearchBar.css";
 
 interface MovieSearchBarProps {
-    onChangeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void
+    onChangeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void,
+    value: string
 }
 
-export default function MovieSearchBar({onChangeHandler}: MovieSearchBarProps) {
+export default function MovieSearchBar({onChangeHandler, value}: MovieSearchBarProps) {
     return (
         <div className="movie-search-bar">
-            <input type={'search'} onChange={onChangeHandler} />
-            <button>Search</button>
+            <label htmlFor="search">Search</label>
+            <input type={'search'} value={value} onChange={onChangeHandler} />
         </div>
     )
 }
