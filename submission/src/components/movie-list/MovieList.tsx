@@ -19,8 +19,9 @@ export default function MovieList({movies}: MovieListProps) {
                 <>
                     {/*<Route key={movie.imdbID} path={`/movie/${movie.imdbID}`}*/}
                     {/*       element={<Movie imdbID={movie.imdbID} />}*/}
-                    {/*/>*/}
+                    {/*>*/}
                     <MovieListItem key={movie.imdbID} {...movie} onHoverHandler={onHoverHandler} />
+                    {/*</Route>*/}
                 </>
             ))}
             {/*</Routes>*/}

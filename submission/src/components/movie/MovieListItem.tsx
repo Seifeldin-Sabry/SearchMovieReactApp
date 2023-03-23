@@ -3,7 +3,7 @@ import "./MovieListItem.css";
 import React from "react";
 
 interface MovieListItemProps extends MovieListItemType {
-    onHoverHandler: (event: React.MouseEvent<HTMLDivElement>) => void
+    onHoverHandler: (event: React.MouseEvent<HTMLDivElement>) => void,
 }
 
 export default function MovieListItem({
@@ -11,11 +11,12 @@ export default function MovieListItem({
                                           Year: year,
                                           Poster: poster,
                                           imdbID,
-                                          onHoverHandler
+                                          onHoverHandler,
                                       }: MovieListItemProps) {
 
 
     return (
+        // <Route key={key} path={`/movies/${imdbID}`} element={<Movie imdbID={imdbID} />}>
         <div className="movie" onMouseOver={onHoverHandler}>
             <img src={poster} alt={title} />
             <div className="movie-info">
@@ -23,5 +24,6 @@ export default function MovieListItem({
                 <p>{year}</p>
             </div>
         </div>
+        // </Route>
     )
 }
