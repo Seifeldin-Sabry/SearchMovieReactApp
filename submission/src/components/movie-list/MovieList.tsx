@@ -13,9 +13,18 @@ export default function MovieList({movies}: MovieListProps) {
 
     return (
         <div className="movie-list">
+            {/*<BrowserRouter>*/}
+            {/*    <Routes>*/}
             {movies.map((movie) => (
-                <MovieListItem key={movie.imdbID} {...movie} onHoverHandler={onHoverHandler} />
+                <>
+                    {/*<Route key={movie.imdbID} path={`/movie/${movie.imdbID}`}*/}
+                    {/*       element={<Movie imdbID={movie.imdbID} />}*/}
+                    {/*/>*/}
+                    <MovieListItem key={movie.imdbID} {...movie} onHoverHandler={onHoverHandler} />
+                </>
             ))}
+            {/*</Routes>*/}
+            {/*</BrowserRouter>*/}
         </div>
     )
 }

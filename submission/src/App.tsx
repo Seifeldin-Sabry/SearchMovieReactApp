@@ -33,7 +33,6 @@ function App() {
                 || <div>No movies found</div>
             }
         </div>
-
     )
 }
 
